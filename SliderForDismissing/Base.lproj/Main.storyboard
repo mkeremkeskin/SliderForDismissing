@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfh-EU-xCl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="ZlQ-1b-BmW">
+            <objects>
+                <viewController id="qfh-EU-xCl" customClass="InitialViewController" customModule="SliderForDismissing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXN-FZ-eNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on7-YS-09b">
+                                <rect key="frame" x="37.5" y="313.5" width="300" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xoy-ap-atk"/>
+                                    <constraint firstAttribute="width" constant="300" id="kwI-q4-Sn4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Open Dismissing View Controller">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openDismissingViewController:" destination="qfh-EU-xCl" eventType="touchUpInside" id="n85-wu-6p1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="cfF-98-SGy">
+                                <rect key="frame" x="147" y="183.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="O8G-Kd-Ony"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZhS-NR-vvT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="Zoo-VY-xeL">
+                                <rect key="frame" x="147" y="527" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9ed-Ug-dph"/>
+                                    <constraint firstAttribute="width" constant="80" id="puB-6E-dTD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-PU-5WD">
+                                <rect key="frame" x="147" y="46" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="BdJ-Xn-zbX"/>
+                                    <constraint firstAttribute="height" constant="80" id="uoK-pa-DhP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="Mrx-we-3II">
+                                <rect key="frame" x="147" y="389.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2Zb-Lz-lkj"/>
+                                    <constraint firstAttribute="width" constant="80" id="zAG-yP-Et8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cfF-98-SGy" firstAttribute="centerX" secondItem="wEh-Xr-pzH" secondAttribute="centerX" id="JTO-Tp-JTZ"/>
+                            <constraint firstItem="Zoo-VY-xeL" firstAttribute="centerX" secondItem="wEh-Xr-pzH" secondAttribute="centerX" id="MkD-k2-aHj"/>
+                            <constraint firstItem="Mrx-we-3II" firstAttribute="centerX" secondItem="wEh-Xr-pzH" secondAttribute="centerX" id="aJk-yt-hFm"/>
+                            <constraint firstItem="on7-YS-09b" firstAttribute="centerY" secondItem="HXN-FZ-eNf" secondAttribute="centerY" id="bvc-Fa-Xr0"/>
+                            <constraint firstItem="wBQ-PU-5WD" firstAttribute="centerY" secondItem="wEh-Xr-pzH" secondAttribute="centerY" multiplier="0.25" id="lI6-wQ-Fh0"/>
+                            <constraint firstItem="cfF-98-SGy" firstAttribute="centerY" secondItem="wEh-Xr-pzH" secondAttribute="centerY" multiplier="0.65" id="mT5-gM-JZv"/>
+                            <constraint firstItem="on7-YS-09b" firstAttribute="centerX" secondItem="HXN-FZ-eNf" secondAttribute="centerX" id="mUo-FC-rJA"/>
+                            <constraint firstItem="Mrx-we-3II" firstAttribute="centerY" secondItem="wEh-Xr-pzH" secondAttribute="centerY" multiplier="1.25" id="meN-XS-MKY"/>
+                            <constraint firstItem="Zoo-VY-xeL" firstAttribute="centerY" secondItem="wEh-Xr-pzH" secondAttribute="centerY" multiplier="1.65" id="sui-jL-TgV"/>
+                            <constraint firstItem="wBQ-PU-5WD" firstAttribute="centerX" secondItem="wEh-Xr-pzH" secondAttribute="centerX" id="zGB-dJ-XBH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wEh-Xr-pzH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5Z-nq-cEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-866" y="134"/>
+        </scene>
+        <!--Dismissing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DismissingViewController" id="BYZ-38-t0r" customClass="DismissingViewController" customModule="SliderForDismissing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZb-FM-AgI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slide down slider to dismiss this View Controller" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-YV-tBz">
+                                        <rect key="frame" x="30" y="131" width="315" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="TSZ-RW-1e3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XLR-YV-tBz" firstAttribute="centerX" secondItem="dZb-FM-AgI" secondAttribute="centerX" id="4C3-MW-BqN"/>
+                                    <constraint firstItem="XLR-YV-tBz" firstAttribute="leading" secondItem="dZb-FM-AgI" secondAttribute="leading" constant="30" id="rQy-jE-26Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="XLR-YV-tBz" secondAttribute="trailing" constant="30" id="tle-qL-mRO"/>
+                                    <constraint firstItem="XLR-YV-tBz" firstAttribute="centerY" secondItem="dZb-FM-AgI" secondAttribute="centerY" multiplier="0.5" id="uQN-lf-vG3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5D5-zo-bdi" userLabel="KKVerticalSlider" customClass="KKVerticalSlider" customModule="SliderForDismissing" customModuleProvider="target">
+                                <rect key="frame" x="152.5" y="397" width="70" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="slideThumbView" label="slideThumbView"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6cT-5A-gaV"/>
+                                    <constraint firstAttribute="height" constant="250" id="YS4-zc-soF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dZb-FM-AgI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="58p-wd-QiN"/>
+                            <constraint firstItem="dZb-FM-AgI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CTE-3l-d76"/>
+                            <constraint firstItem="5D5-zo-bdi" firstAttribute="centerX" secondItem="dZb-FM-AgI" secondAttribute="centerX" id="Hmp-pD-E37"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5D5-zo-bdi" secondAttribute="bottom" constant="20" id="g3U-aQ-xeg"/>
+                            <constraint firstItem="dZb-FM-AgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sby-7H-OZm"/>
+                            <constraint firstItem="dZb-FM-AgI" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="uKH-cY-dWp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="kkVerticalSlider" destination="5D5-zo-bdi" id="iRk-6r-tFv"/>
+                        <outlet property="viewToSlide" destination="dZb-FM-AgI" id="iAM-bv-5e1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowDown" width="80" height="80"/>
+    </resources>
+</document>
