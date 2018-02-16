@@ -31,6 +31,7 @@ class KKVerticalSlider: UIView  {
         }
     }
 
+
     var contentView: UIView?
     var initialTopConstraint: CGFloat = 0.0
 
@@ -61,7 +62,7 @@ class KKVerticalSlider: UIView  {
     }
 
     override func didMoveToWindow() {
-        //ensure thumb always starts from top
+        //ensure thumb always start from top
         self.thumbTopConstraint.constant = 0
         self.initialTopConstraint = self.thumbTopConstraint.constant;
     }
@@ -70,6 +71,15 @@ class KKVerticalSlider: UIView  {
         super.prepareForInterfaceBuilder()
         arrangeView()
         contentView?.prepareForInterfaceBuilder()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        arrangeView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 
     //pan action defined in xib
