@@ -17,17 +17,23 @@ protocol KKVerticalSliderDelegate {
 class KKVerticalSlider: UIView  {
 
     var delegate: KKVerticalSliderDelegate?
-    
+
     @IBOutlet weak fileprivate var sliderPath: UIView!
     @IBOutlet weak fileprivate var thumb: UIView!
     @IBOutlet weak fileprivate var destination: UIView!
     @IBOutlet weak fileprivate var thumbTopConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate var panGesture: UIPanGestureRecognizer!
 
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+
     var contentView: UIView?
-    @IBInspectable var nibName: String?
-    
-    var initialTopConstraint: CGFloat = 0.0 
+    var initialTopConstraint: CGFloat = 0.0
+
     var isDestinationReached: Bool {
         get {
             let distanceFromDestination: CGFloat = self.destination.center.y - self.thumb.center.y
@@ -44,8 +50,6 @@ class KKVerticalSlider: UIView  {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.clipsToBounds = true
-        view.layer.cornerRadius = self.bounds.size.width / 2
         self.addSubview(view)
         contentView = view
     }
@@ -56,24 +60,16 @@ class KKVerticalSlider: UIView  {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 
+    override func didMoveToWindow() {
+        //ensure thumb always starts from top
+        self.thumbTopConstraint.constant = 0
+        self.initialTopConstraint = self.thumbTopConstraint.constant;
+    }
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         arrangeView()
         contentView?.prepareForInterfaceBuilder()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    override func didMoveToWindow() {
-        //ensure thumb always start from top
-        self.thumbTopConstraint.constant = 0
-        self.initialTopConstraint = self.thumbTopConstraint.constant;
     }
 
     //pan action defined in xib
